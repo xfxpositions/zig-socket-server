@@ -33,6 +33,7 @@ fn handler_worker(client: *ClientData) void {
 
 fn handle_stream(stream: std.net.Stream, adress: std.net.Address) void {
     // Print client addr
+    std.debug.print("new thread opened\n", .{});
     std.debug.print("Client addr is {any}\n", .{adress});
 
     var buffer: [256]u8 = undefined;
